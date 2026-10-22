@@ -15,7 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 18px 8%;
-  background: #101b35;
+  background: red;
   color: white;
   flex-wrap: wrap;
 }
