@@ -1,0 +1,29 @@
+
+
+name: CodeOne Testing Workflow
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test-website:
+    name: test-website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check website files
+        run: |
+          test -s index.html
+          echo "Website test passed!"
+
