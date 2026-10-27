@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - develop
+
   pull_request:
     branches:
       - main
@@ -25,5 +26,12 @@ jobs:
       - name: Check website files
         run: |
           test -s index.html
-          echo "Website test passed!"
+          test -s style.css
+          test -s script.js
+          echo "All website files are present."
 
+      - name: Check HTML
+        run: |
+          grep -q "<html" index.html
+          grep -q "</html>" index.html
+          echo "HTML check passed."
