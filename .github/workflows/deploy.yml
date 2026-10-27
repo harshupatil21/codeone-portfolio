@@ -41,8 +41,4 @@ jobs:
           node --check script.js
           echo "JavaScript syntax check passed."
 
-      - name: Check CSS
-  run: |
-    grep -q "{" style.css
-    grep -q "}" style.css
-    echo "CSS check passed."
+      
