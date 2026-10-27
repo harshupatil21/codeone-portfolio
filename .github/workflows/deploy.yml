@@ -35,3 +35,10 @@ jobs:
           grep -q "<html" index.html
           grep -q "</html>" index.html
           echo "HTML check passed."
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check script.js
+          echo "JavaScript syntax check passed."
+
+      
